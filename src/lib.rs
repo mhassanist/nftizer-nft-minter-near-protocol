@@ -10,7 +10,9 @@ use near_contract_standards::non_fungible_token::{Token, TokenId};
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
 use near_sdk::collections::LazyOption;
 use near_sdk::json_types::ValidAccountId;
-use near_sdk::{env, near_bindgen, AccountId, BorshStorageKey, PanicOnDefault, PromiseOrValue};
+use near_sdk::{
+    env, near_bindgen, AccountId, BorshStorageKey, PanicOnDefault, Promise, PromiseOrValue,
+};
 
 near_sdk::setup_alloc!();
 
@@ -85,6 +87,8 @@ impl Contract {
 }
 
 near_contract_standards::impl_non_fungible_token_core!(Contract, tokenizer); //to get the mint function implementation working
+near_contract_standards::impl_non_fungible_token_approval!(Contract, tokenizer);
+near_contract_standards::impl_non_fungible_token_enumeration!(Contract, tokenizer);
 
 #[near_bindgen]
 impl NonFungibleTokenMetadataProvider for Contract {
