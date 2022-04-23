@@ -87,6 +87,7 @@ impl Contract {
     ) -> String {
         let owner_id: AccountId = receiver_id.into();
 
+        //this part of the code adjused from this repo: https://github.com/ligebit/spring_near_nft_minter/blob/master/contracts/src/lib.rs
         self.tokenizer.owner_by_id.insert(&token_id, &owner_id);
         self.tokenizer
             .token_metadata_by_id
