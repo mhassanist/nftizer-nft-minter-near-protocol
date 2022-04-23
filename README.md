@@ -1,4 +1,6 @@
 # NFTizer | NFT Minter on NEAR Protocol
+This is a ready-to-use smart contract for minting NFTs on NEAR blockchain. Below is hwo you may use it. I'm assuming you already familiar with NEAR and have installed Rust blockchain and near-cli. 
+
 
 ## Smart Contract Sample Usage
 
