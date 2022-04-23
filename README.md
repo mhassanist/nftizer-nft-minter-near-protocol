@@ -12,7 +12,7 @@ env 'RUSTFLAGS=-C link-arg=-s' cargo build --target wasm32-unknown-unknown --rel
 $ near deploy --wasmFile target/wasm32-unknown-unknown/release/near_spring_nft.wasm --accountId nftizer.mhassanist.testnet 
 ```
 
-### Intialize the contract (ont time)
+### Intialize the contract (call one time only)
 ```
 $ near call nftizer.mhassanist.testnet  new_default_meta '{"owner_id": "'mhassanist.testnet'"}' --accountId mhassanist.testnet
 ```
